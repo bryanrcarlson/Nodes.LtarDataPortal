@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <RootNamespace>Nsar.Nodes.CORe.MetWriter</RootNamespace>
+    <RootNamespace>Nsar.Nodes.LtarDataPortal.Meteorology</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
