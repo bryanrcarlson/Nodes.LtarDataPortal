@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Nsar.Nodes.CORe.MetWriter
+namespace Nsar.Nodes.LtarDataPortal.Meteorology.Dto
 {
     public class DataRecord
     {

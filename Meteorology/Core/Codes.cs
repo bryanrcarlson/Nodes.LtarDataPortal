@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MetWriter
+namespace Nsar.Nodes.LtarDataPortal.Meteorology.Core
 {
     public static class LtarSiteAcronymCodes
     {

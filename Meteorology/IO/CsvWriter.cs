@@ -1,12 +1,13 @@
 ﻿using CsvHelper;
 using Nsar.Common.UnitOfMeasure;
+using Nsar.Nodes.LtarDataPortal.Meteorology.Dto;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Nsar.Nodes.CORe.MetWriter
+namespace Nsar.Nodes.LtarDataPortal.Meteorology.IO
 {
     public class CsvWriter
     {
