@@ -7,11 +7,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Nsar.Nodes.LtarDataPortal.Meteorology.IO
+namespace Nsar.Nodes.LtarDataPortal.Meteorology.Load
 {
     public class CsvWriter
     {
-        private List<DataRecord> data;
+        private List<COReDataRecord> data;
         private readonly string folderPath;
         private ICsvWriter writer;
 
@@ -38,19 +38,19 @@ namespace Nsar.Nodes.LtarDataPortal.Meteorology.IO
         /// <param name="utcHourOffset">Timezone offset from UTC for the data (accepts negatives)</param>
         /// <param name="data">List of measurements with datetime associated</param>
         /// <returns>List of created DataRecords</returns>
-        public List<DataRecord> CreateDataRecord(
+        public List<COReDataRecord> CreateDataRecord(
             string ltarSiteAcronym,
             string stationId,
             string recordType,
             int utcHourOffset,
-            List<ITemperalMeasurement> data)
+            List<ITemporalMeasurement> data)
         {
-            List<DataRecord> dataRecords = new List<DataRecord>();
+            List<COReDataRecord> dataRecords = new List<COReDataRecord>();
 
             var tests = data.GroupBy(d => d.DateTime).ToList();
-            IEnumerable<IGrouping<DateTime, ITemperalMeasurement>> groups = data.GroupBy(d => d.DateTime);
+            IEnumerable<IGrouping<DateTime, ITemporalMeasurement>> groups = data.GroupBy(d => d.DateTime);
 
-            foreach (IGrouping<DateTime, ITemperalMeasurement> group in groups)
+            foreach (IGrouping<DateTime, ITemporalMeasurement> group in groups)
             {
                 // TODO: Don't hardcode!  When you have time...
                 var airTemp = group.Single(d => d.Phenomenon.GetType() == typeof(AirTemperature)).NumericalValue;
@@ -61,7 +61,7 @@ namespace Nsar.Nodes.LtarDataPortal.Meteorology.IO
                 var dto = new DateTimeOffset(group.Key, new TimeSpan(utcHourOffset, 0, 0));
 
                 // TODO: Move this to a function of DataRecord so it can be overloaded in derived classes
-                DataRecord dr = new DataRecord()
+                COReDataRecord dr = new COReDataRecord()
                 {
                     AirPressure = "",
                     AirTemperature = airTemp.ToString("0.00"),
@@ -122,7 +122,7 @@ namespace Nsar.Nodes.LtarDataPortal.Meteorology.IO
                 throw new Exception("DataRecord was not found, did you call CreateDataRecord()?");
             }
 
-            DataRecord d = data.Last();
+            COReDataRecord d = data.Last();
 
             DateTime date = DateTime.Parse(d.DateTime);
 

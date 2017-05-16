@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Nsar.Nodes.LtarDataPortal.Meteorology.Dto
 {
-    public class DataRecord
+    // TODO: Document using Table 3 in Campbell, 2015
+    public class COReDataRecord
     {
         public string LTARSiteAcronym { get; set; }
         public string StationID { get; set; }
