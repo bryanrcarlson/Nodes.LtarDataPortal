@@ -7,7 +7,7 @@ using Nsar.Common.UnitOfMeasure;
 
 namespace Nsar.Nodes.LtarDataPortal.Meteorology.Transform
 {
-    class TransformTemporalMeasurement : ITransformToCOReDataRecord<ITemporalMeasurement>
+    public class TransformTemporalMeasurement : ITransformToCOReDataRecord<ITemporalMeasurement>
     {
         /// <summary>
         /// Converts a list of ITemperalMeasurements into a DTO formated for CORe ingest and grouped by datetime

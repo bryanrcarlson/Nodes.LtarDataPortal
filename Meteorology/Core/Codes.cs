@@ -8,8 +8,8 @@
 
     public static class RecordTypeCodes
     {
-        // TODO: Incomplete
         public const string LegacySiteSpecificDefinition = "L";
         public const string CommonObservationProtocol = "C";
+        public const string BothLegacyDefinitionsAndCommonProtocols = "B";
     }
 }
