@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Nsar.Nodes.LtarDataPortal.Meteorology.Core
 {
-    interface ILoadMeteorology
+    public interface ILoadMeteorology
     {
         void Load(List<COReDataRecord> data);
     }

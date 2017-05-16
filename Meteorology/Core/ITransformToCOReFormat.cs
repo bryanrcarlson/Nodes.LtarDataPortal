@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Nsar.Nodes.LtarDataPortal.Meteorology.Core
 {
-    interface ITransformToCOReDataRecord<T> where T : class
+    public interface ITransformToCOReDataRecord<T> where T : class
     {
         List<COReDataRecord> Transform(
             string ltarSiteAcronym,
