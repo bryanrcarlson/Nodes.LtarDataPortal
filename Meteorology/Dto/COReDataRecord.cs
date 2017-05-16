@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Nsar.Nodes.LtarDataPortal.Meteorology.Dto
+﻿namespace Nsar.Nodes.LtarDataPortal.Meteorology.Dto
 {
     // TODO: Document using Table 3 in Campbell, 2015
     public class COReDataRecord

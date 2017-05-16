@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Nsar.Nodes.LtarDataPortal.Meteorology.Core
+﻿namespace Nsar.Nodes.LtarDataPortal.Meteorology.Core
 {
     public static class LtarSiteAcronymCodes
     {
@@ -12,6 +8,7 @@ namespace Nsar.Nodes.LtarDataPortal.Meteorology.Core
 
     public static class RecordTypeCodes
     {
+        // TODO: Incomplete
         public const string LegacySiteSpecificDefinition = "L";
         public const string CommonObservationProtocol = "C";
     }

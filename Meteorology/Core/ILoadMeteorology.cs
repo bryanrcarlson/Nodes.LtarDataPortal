@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Nsar.Nodes.LtarDataPortal.Meteorology.Dto;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Nsar.Nodes.LtarDataPortal.Meteorology.Core
 {
     interface ILoadMeteorology
     {
-        void Load();
+        void Load(List<COReDataRecord> data);
     }
 }
